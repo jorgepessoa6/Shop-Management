@@ -1,0 +1,63 @@
+type Mutation {
+    addShop(shopDto: ShopDto): ShopResponseDto
+    updateShop(shopDto: ShopDto): ShopResponseDto
+    updateShopStorage(storageDto: StorageDto): ShopResponseDto
+}
+
+type Query {
+    findShopId(id: ID!): Boolean!
+}
+
+input ShopDto {
+    id : ID
+    address: String!
+    personInChargeId: ID!
+    designation: String!
+    schedules: [ScheduleDto]!
+    minimumDelivery: Int
+    maxOrders: Int
+    period: Int
+}
+
+input StorageDto {
+    id: ID
+    quantity: Int
+    sandwichId: ID
+}
+
+input ScheduleDto {
+    openingHours: String
+    closingHours: String
+    dayOfWeek: String
+}
+
+type ShopResponseDto {
+    id : ID
+    address: String
+    designation: String
+    schedules: [ScheduleResponseDto]
+    storages: [StorageResponseDto]
+    personInChargeId: ID
+}
+
+type ScheduleResponseDto {
+    openingHours: String
+    closingHours: String
+    dayOfWeek: DAYOFTHEWEEK
+}
+
+type StorageResponseDto {
+    id: ID
+    quantity: Int
+    sandwichId: ID
+}
+
+enum DAYOFTHEWEEK {
+    MONDAY
+    TUESDAY
+    WEDNESDAY
+    THURSDAY
+    FRIDAY
+    SATURDAY
+    SUNDAY
+}

@@ -1,0 +1,5 @@
+package resource.model;
+
+public enum DAYOFTHEWEEK {
+    MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY
+}

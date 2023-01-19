@@ -1,0 +1,9 @@
+query availablePromotions($id: ID!,$deliveryDate: String!){
+    availablePromotions(orderDto: {shopId: $id, deliveryDate: $deliveryDate}) {
+        shopId
+        startDate
+        sandwichIds
+        endDate
+        discountPercentage
+    }
+}

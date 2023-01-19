@@ -1,0 +1,31 @@
+{
+  "provider": {
+    "name": "User Service"
+  },
+  "consumer": {
+    "name": "Shop Client"
+  },
+  "interactions": [
+    {
+      "description": "a request for a user by username",
+      "request": {
+        "method": "POST",
+        "path": "/",
+        "body": {
+          "query": "query{ getPersonInChargeId(id: \"212905a4-b2cd-4c04-b323-8067f963d6d7\") }"
+        }
+      },
+      "response": {
+        "status": 200,
+        "data": {
+          "getPersonInChargeId": false
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+input OrderDto {
+    deliveryDate: String
+    orderItemDto: [OrderItemDto]
+    shopId: ID
+    userId: ID
+}
+
+input OrderItemDto {
+    quantity: Int
+    sandwichId: ID
+}
+
+type OrderResponseDto {
+    id: ID
+    deliveryDate: String
+    orderItems: [OrderItemResponseDto]
+    totalPrice: Float
+}
+
+type OrderItemResponseDto {
+    id: ID
+    quantity: Int
+    sandwichId: ID
+}
+
+type Query {
+    getOrderByUser(id: ID!): [OrderResponseDto]
+}
+
+type Mutation {
+    addOrder(orderDto: OrderDto!): OrderResponseDto
+}

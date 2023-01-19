@@ -1,0 +1,31 @@
+{
+  "provider": {
+    "name": "Shop Service"
+  },
+  "consumer": {
+    "name": "Promotion Client"
+  },
+  "interactions": [
+    {
+      "description": "a request for a shop by id",
+      "request": {
+        "method": "POST",
+        "path": "/",
+        "body": {
+          "query": "query{ findShopId(id: \"212905a4-b2cd-4c04-b323-8067f963d6d7\") }"
+        }
+      },
+      "response": {
+        "status": 200,
+        "data": {
+          "findShopId": false
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<ns2:softwareSystem xmlns:ns2="http://www.hello2morrow.com/sonargraph/core" id="e4aad8cd7e4266596f13606370ebcd1e" version="12.5.1.776">
+	<description></description>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/csharp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdCSharpManualModule" name="Main" id="41e976422211aa24269f43022bb897b7" language="CSharp">
+		<description></description>
+		<moduleProfile targetFrameworkVersion2="4.0">
+			<directories></directories>
+			<preprocessorSymbols></preprocessorSymbols>
+		</moduleProfile>
+	</module>
+	<systemExtension xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/csharp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdCSharpSystemConfiguration" language="CSharp">
+		<systemProfile targetFrameworkVersion2="4.0">
+			<profileRef profileId=".NETFramework_v4.8"></profileRef>
+			<directories></directories>
+			<preprocessorSymbols></preprocessorSymbols>
+		</systemProfile>
+	</systemExtension>
+</ns2:softwareSystem>

@@ -1,0 +1,41 @@
+type Mutation {
+    switchPromotionType: String
+    addPromotion(promotion: PromotionInput!): Promotion
+}
+
+type Query {
+    findPromotionType: [PromotionType]
+    availablePromotions(orderDto: OrderInput!): [Promotion]
+}
+
+type PromotionType {
+    id: ID!
+    promotionkind: String!
+}
+
+type Order {
+    deliveryDate: String!
+    shopId: ID!
+}
+
+input OrderInput {
+    deliveryDate: String!
+    shopId: ID!
+}
+
+input PromotionInput {
+    startDate: String!
+    endDate: String!
+    discountPercentage: Float!
+    shopId: ID
+    sandwiches: [ID!]!
+}
+
+type Promotion {
+    id: ID
+    startDate: String
+    endDate: String
+    discountPercentage: Float
+    shopId: ID
+    sandwichIds: [ID]
+}

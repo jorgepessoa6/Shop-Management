@@ -1,0 +1,36 @@
+server:
+  port: 8090
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: SHOPMANAGEMENT
+          uri: lb://SHOPMANAGEMENT
+          predicates:
+            - Path=/shop/**
+          filters:
+            - RewritePath=/shop, /graphql
+        - id: USERMANAGEMENT
+          uri: lb://USERMANAGEMENT
+          predicates:
+            - Path=/user/**
+          filters:
+            - RewritePath=/user, /graphql
+        - id: PROMOTIONMANAGEMENT
+          uri: lb://PROMOTIONMANAGEMENT
+          predicates:
+            - Path=/promotion/**
+          filters:
+            - RewritePath=/promotion, /graphql
+        - id: ORDERMANAGEMENT
+          uri: lb://ORDERMANAGEMENT
+          predicates:
+            - Path=/order/**
+          filters:
+            - RewritePath=/order, /graphql
+

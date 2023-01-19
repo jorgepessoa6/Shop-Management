@@ -1,0 +1,3 @@
+query findCustomerId($id: ID!){
+    findCustomerId(id: $id)
+}

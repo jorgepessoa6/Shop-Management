@@ -1,0 +1,35 @@
+input User {
+    username: String!
+    email: String!
+    address: String!
+    postalCode: String!
+    location: String!
+    password: String!
+    taxIdNumber: String!
+}
+
+type UserRESPONSE {
+    id : ID
+    email: String
+    username: String
+    password: String
+    taxIdNumber: String
+    address: String
+    postalCode: String
+    location: String
+}
+
+type Query {
+    getPersonInChargeId(id: ID!): Boolean!
+    findCustomerId(id: ID!): Boolean!
+}
+
+type Mutation {
+    registerCustomer (
+        userDto: User
+    ): UserRESPONSE
+
+    addPersonInCharge(
+        userDto: User
+    ): UserRESPONSE
+}

@@ -1,0 +1,6 @@
+query findPromotionType{
+    findPromotionType{
+        id
+        promotionkind
+    }
+}

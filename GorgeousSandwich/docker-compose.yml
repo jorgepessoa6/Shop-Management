@@ -1,0 +1,116 @@
+services:
+  ##USER
+  postgres-user:
+    container_name: User-Management-db
+    image: postgres
+    environment:
+      POSTGRES_USER: GorgeousSandwich
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgresUser
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres-user
+    restart: unless-stopped
+
+  ##SHOP
+  postgres-shop:
+    container_name: Shop-Management-db
+    image: postgres
+    environment:
+      POSTGRES_USER: GorgeousSandwich
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgresShop
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - postgres-shop
+    restart: unless-stopped
+
+  ##Sandwich
+  postgres-sandwich:
+    container_name: Sandwich-Management-db
+    image: postgres
+    environment:
+      POSTGRES_USER: GorgeousSandwich
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgresSandwich
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5434:5432"
+    networks:
+      - postgres-sandwich
+    restart: unless-stopped
+
+  ##Promotion
+  postgres-promotion:
+    container_name: Promotion-Management-db
+    image: postgres
+    environment:
+      POSTGRES_USER: GorgeousSandwich
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgresPromotion
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5435:5432"
+    networks:
+      - postgres-promotion
+    restart: unless-stopped
+
+  ##PGADMIN
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - postgres-user
+      - postgres-shop
+      - postgres-sandwich
+      - postgres-promotion
+      - postgres-order
+    restart: unless-stopped
+
+  ##Order
+  postgres-order:
+    container_name: Order-Management-db
+    image: postgres
+    environment:
+      POSTGRES_USER: GorgeousSandwich
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgresOrder
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5436:5432"
+    networks:
+      - postgres-promotion
+    restart: unless-stopped
+
+networks:
+  postgres-user:
+    driver: bridge
+  postgres-shop:
+    driver: bridge
+  postgres-sandwich:
+    driver: bridge
+  postgres-promotion:
+    driver: bridge
+  postgres-order:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:
+
