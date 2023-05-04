@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SandwichManagement\SandwichManagement.csproj" />
+    <ProjectReference Include="..\VotesRead\VotesRead.csproj" />
   </ItemGroup>
 
 </Project>

@@ -15,82 +15,82 @@ class PromotionTest {
     private final UUID shopId = UUID.randomUUID();
     Promotion promotion = new Promotion();
     @Test
-    void getId() {
+    public void getIdTest() {
         UUID id = new UUID(1, 1);
         promotion.setId(id);
         assertEquals(id, promotion.getId());
     }
 
     @Test
-    void setId() {
+    public void setIdTest() {
         UUID id = new UUID(1, 1);
         promotion.setId(id);
         assertEquals(id, promotion.getId());
     }
 
     @Test
-    void getStartDate() {
+    public void getStartDateTest() {
         Date startDate = new Date();
         promotion.setStartDate(startDate);
         assertEquals(startDate, promotion.getStartDate());
     }
 
     @Test
-    void setStartDate() {
+    public void setStartDateTest() {
         Date startDate = new Date();
         promotion.setStartDate(startDate);
         assertEquals(startDate, promotion.getStartDate());
     }
 
     @Test
-    void getEndDate() {
+    public void getEndDateTest() {
         Date endDate = new Date();
         promotion.setEndDate(endDate);
         assertEquals(endDate, promotion.getEndDate());
     }
 
     @Test
-    void setEndDate() {
+    public void setEndDateTest() {
         Date endDate = new Date();
         promotion.setEndDate(endDate);
         assertEquals(endDate, promotion.getEndDate());
     }
 
     @Test
-    void getDiscountPercentage() {
+    public void getDiscountPercentageTest() {
         double discountPercentage = 20;
         promotion.setDiscountPercentage(discountPercentage);
         assertEquals(discountPercentage, promotion.getDiscountPercentage());
     }
 
     @Test
-    void setDiscountPercentage() {
+    public void setDiscountPercentageTest() {
         double discountPercentage = 20;
         promotion.setDiscountPercentage(discountPercentage);
         assertEquals(discountPercentage, promotion.getDiscountPercentage());
     }
 
     @Test
-    void getShop() {
+    public void getShopTest() {
         promotion.setShopId(shopId);
         assertEquals(shopId, promotion.getShopId());
     }
 
     @Test
-    void setShop() {
+    public void setShopTest() {
         promotion.setShopId(shopId);
         assertEquals(shopId, promotion.getShopId());
     }
 
     @Test
-    void getSandwiches() {
+    public void getSandwichesTest() {
         List<UUID> sandwichList = new ArrayList<>();
         promotion.setSandwichIds(sandwichList);
         assertEquals(sandwichList, promotion.getSandwichIds());
     }
 
     @Test
-    void setSandwiches() {
+    public void setSandwichesTest() {
         List<UUID> sandwichList = new ArrayList<>();
         promotion.setSandwichIds(sandwichList);
         assertEquals(sandwichList, promotion.getSandwichIds());

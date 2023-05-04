@@ -13,6 +13,4 @@ public class PromotionManagementApplication {
     public static void main(String[] args) {
         SpringApplication.run(PromotionManagementApplication.class, args);
     }
-
-
 }

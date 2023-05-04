@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SandwichManagement", "SandwichManagement\SandwichManagement.csproj", "{C31427E1-9D8E-4F48-A568-781C74251DED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotesRead", "VotesRead\VotesRead.csproj", "{C31427E1-9D8E-4F48-A568-781C74251DED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FC3AEA61-BECA-499E-BD68-18360FCDF648}"
 EndProject

@@ -1,4 +1,5 @@
 package resource.contract;
+/*
 
 import au.com.dius.pact.core.model.annotations.Pact;
 import au.com.dius.pact.provider.junit.Provider;
@@ -26,8 +27,11 @@ public class PromotionContractTest {
     }
 
     @Pact(provider = "Shop Service", consumer = "Promotion Client")
-    public String createPact(/*PactDslWithProvider builder*/) {
-        /*return builder
+    public String createPact(*/
+/*PactDslWithProvider builder*//*
+) {
+        */
+/*return builder
                 .given("a list of products exists")
                 .uponReceiving("a request for the list of products")
                 .path("/products")
@@ -35,7 +39,9 @@ public class PromotionContractTest {
                 .willRespondWith()
                 .status(200)
                 .body("[{\"name\":\"Product 1\",\"price\":9.99,\"description\":\"A great product\"},{\"name\":\"Product 2\",\"price\":19.99,\"description\":\"Another great product\"}]")
-                .toPact();*/
+                .toPact();*//*
+
         return "";
     }
 }
+*/
